@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Players from './components/Players.jsx';
+import Counter from './components/Counter.jsx';
 import { useStyles } from './hooks/useStyles.js';
 import { useDarkMode } from './hooks/useDarkMode.jsx';
 
@@ -10,6 +11,7 @@ function App() {
   return (
     <div className={`App ${darkMode ? classes.appDM : classes.app}`}>
       <Players darkMode={darkMode} setDarkMode={setDarkMode} />
+      <Counter />
     </div>
   );
 }
