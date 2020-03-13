@@ -4,12 +4,13 @@ import { useStyles } from '../hooks/useStyles.js';
 
 const Player = props => {
   const classes = useStyles();
+  const { darkMode } = props;
   const { name, country, searches } = props.player;
   return (
-    <div className={classes.card} >
-      <h2 className={classes.h2} >{name}</h2>
-      <p className={classes.p} >Country: {country}</p>
-      <p className={classes.p} >Searches: {searches}</p>
+    <div className={darkMode ? classes.cardDM : classes.card} >
+      <h2 className={darkMode ? classes.h2DM : classes.h2} >{name}</h2>
+      <p className={darkMode ? classes.pDM : classes.p} >Country: {country}</p>
+      <p className={darkMode ? classes.pDM : classes.p} >Searches: {searches}</p>
     </div>
   );
 }

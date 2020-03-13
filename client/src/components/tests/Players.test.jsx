@@ -1,9 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import * as rtl from '@testing-library/react';
 import Players from '../Players.jsx';
 
-it('renders Players without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Players />, div);
-  ReactDOM.unmountComponentAtNode(div);
+test('renders Players without crashing', () => {
+  rtl.render(<Players />);
 });
